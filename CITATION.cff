@@ -47,7 +47,7 @@ identifiers:
     value: "https://academic.oup.com/nar/advance-article/doi/10.1093/nar/gkab621/6329114"
 license: MIT
 message: "If you use this software, please cite it using these metadata."
-repository-code: "https://github.com/aryarm/varCA"
+repository-code: "https://github.com/mcvickerlab/varCA"
 title: "Discovering single nucleotide variants and indels from bulk and single-cell ATAC-seq"
 version: "v0.3.1"
 ...
