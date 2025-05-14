@@ -1,5 +1,4 @@
 [![Snakemake](https://img.shields.io/badge/snakemake-5.18.0-brightgreen.svg?style=flat-square)](https://snakemake.readthedocs.io/)
-[![License](https://img.shields.io/apm/l/vim-mode.svg)](LICENSE)
 
 # varCA
 A pipeline for running an ensemble of variant callers to predict variants from ATAC-seq reads.
@@ -7,20 +6,20 @@ A pipeline for running an ensemble of variant callers to predict variants from A
 The entire pipeline is made up of two smaller subworkflows. The `prepare` subworkflow calls each variant caller and prepares the resulting data for use by the `classify` subworkflow, which uses an ensemble classifier to predict the existence of variants at each site.
 
 > [!NOTE]  
-> VarCA does not output genotypes (GT fields) because of the possibility of inaccuracy in the presence of allele-specific open chromatin. Please refer to https://github.com/aryarm/varCA/issues/43#issuecomment-1088028758
+> VarCA does not output genotypes (GT fields) because of the possibility of inaccuracy in the presence of allele-specific open chromatin. Please refer to https://github.com/mcvickerlab/varCA/issues/43#issuecomment-1088028758
 
 ### [Code Ocean](https://codeocean.com/capsule/6980349/tree/v1)
-Using [our Code Ocean compute capsule](https://codeocean.com/capsule/6980349/tree/v1), you can execute [VarCA v0.2.1](https://github.com/aryarm/varCA/releases/tag/v0.2.1) on example data without downloading or setting up the project. To interpret the output of VarCA, see the output sections of the [`prepare` subworkflow](rules#output) and the [`classify` subworkflow](rules#output-1) in the [rules README](rules/README.md).
+Using [our Code Ocean compute capsule](https://codeocean.com/capsule/6980349/tree/v1), you can execute [VarCA v0.2.1](https://github.com/mcvickerlab/varCA/releases/tag/v0.2.1) on example data without downloading or setting up the project. To interpret the output of VarCA, see the output sections of the [`prepare` subworkflow](rules#output) and the [`classify` subworkflow](rules#output-1) in the [rules README](rules/README.md).
 
 # download
-Execute the following command or download the [latest release](https://github.com/aryarm/varCA/releases/latest) manually.
+Execute the following command or download the [latest release](https://github.com/mcvickerlab/varCA/releases/latest) manually.
 ```
-git clone https://github.com/aryarm/varCA.git
+git clone https://github.com/mcvickerlab/varCA.git
 ```
-Also consider downloading the [example data](https://github.com/aryarm/varCA/releases/latest/download/data.tar.gz).
+Also consider downloading the [example data](https://github.com/mcvickerlab/varCA/releases/latest/download/data.tar.gz).
 ```
 cd varCA
-wget -O- -q https://github.com/aryarm/varCA/releases/latest/download/data.tar.gz | tar xvzf -
+wget -O- -q https://github.com/mcvickerlab/varCA/releases/latest/download/data.tar.gz | tar xvzf -
 ```
 
 # setup
@@ -91,5 +90,5 @@ Various scripts used by the pipeline. See the [script README](scripts/README.md)
 An example bash script for executing the pipeline using `snakemake` and `conda`. Any arguments to this script are passed directly to `snakemake`.
 
 # citation
-There is an option to _"Cite this repository"_ on the right sidebar of [the repository homepage](https://github.com/aryarm/varCA).
+There is an option to _"Cite this repository"_ on the right sidebar of [the repository homepage](https://github.com/mcvickerlab/varCA).
 > Massarat, A. R., Sen, A., Jaureguy, J., Tyndale, S. T., Fu, Y., Erikson, G., & McVicker, G. (2021). Discovering single nucleotide variants and indels from bulk and single-cell ATAC-seq. Nucleic Acids Research, gkab621. https://doi.org/10.1093/nar/gkab621
